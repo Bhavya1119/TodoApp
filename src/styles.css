@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Body Styles */
+body {
+  background: #222;
+  color: #fff;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.new-item-form label {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Button Styles */
+.btn {
+  background: #3498db;
+  border: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover, .btn:focus-visible {
+  background: #2980b9;
+}
+
+.btn.btn-danger {
+  background: #e74c3c;
+  border: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.btn.btn-danger:hover, .btn.btn-danger:focus-visible {
+  background: #c0392b;
+}
+
+/* Input Styles */
+.new-item-form input {
+  outline: none;
+  border: 2px solid #3498db;
+  background: #2c3e50;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: border-color 0.3s ease;
+}
+
+.new-item-form input:focus {
+  border: 2px solid #2980b9;
+}
+
+/* Header Styles */
+.header {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* List Styles */
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.list li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:checked) label {
+  color: #e74c3c;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 2px solid #3498db;
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #3498db;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.list li label:hover::before {
+  background: #2980b9;
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: #e74c3c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: #c0392b;
+}
